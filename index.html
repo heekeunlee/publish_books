@@ -46,21 +46,23 @@
       </section>
 
       <section class="focus-grid">
-        <article class="focus-card dark">
+        <article class="focus-card dark clickable" data-detail="returns" role="button" tabindex="0" aria-label="반품 사유 작품 상세 보기">
           <div class="card-top"><div><span class="tag">오늘의 초점</span><h2>『반품 사유』</h2><p>장편소설 · Mac mini</p></div><span class="big-number">55<small>%</small></span></div>
           <div class="chapter-track" aria-label="20장 중 11장 진행">
             <div class="chapters" id="novelChapters"></div>
             <div class="track-label"><span>1장</span><strong>11장까지 집필</strong><span>20장</span></div>
           </div>
           <div class="next-action"><span>다음 한 가지</span><strong>10·11장 고문 검토 → 12장 집필</strong></div>
+          <span class="open-detail">작품 상세 보기 <b>↗</b></span>
         </article>
 
-        <article class="focus-card light">
+        <article class="focus-card light clickable" data-detail="classroom" role="button" tabindex="0" aria-label="아무도 그런 적 없다고 했다 작품 상세 보기">
           <div class="card-top"><div><span class="tag coral">출간 근접</span><h2>『아무도 그런 적 없다고 했다』</h2><p>창작동화 연작 · Mac mini</p></div><span class="status-seal">POD<br />READY</span></div>
           <div class="pipeline">
             <div class="done"><b>✓</b><span>원고</span></div><i></i><div class="done"><b>✓</b><span>검토</span></div><i></i><div class="done"><b>✓</b><span>삽화</span></div><i></i><div class="done"><b>✓</b><span>내지 PDF</span></div><i></i><div class="current"><b>5</b><span>표지 확정</span></div>
           </div>
           <div class="next-action peach"><span>다음 한 가지</span><strong>표지 시안 선택 후 POD 제출 사양 최종 점검</strong></div>
+          <span class="open-detail">작품 상세 보기 <b>↗</b></span>
         </article>
       </section>
 
@@ -92,6 +94,13 @@
       </section>
       <footer><span>출판 작업실 통합 현황</span><span>실제 파일·Git·SSH 점검 기반</span></footer>
     </main>
+    <div class="modal" id="workModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" data-close-modal aria-label="팝업 닫기">×</button>
+        <div id="modalContent"></div>
+      </section>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
