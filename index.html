@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171a16" />
+    <title>출판 작업실 · 통합 현황</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="paper-noise"></div>
+    <main class="shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">PUBLISHING DESK · 2026</p>
+          <h1>출판 작업실</h1>
+          <p class="lede">맥북과 맥미니에 흩어진 원고를 한눈에.</p>
+        </div>
+        <div class="as-of">
+          <span class="live-dot"></span>
+          <div><strong>두 장비 확인 완료</strong><small>2026. 09. 08 · 09:15 KST 기준</small></div>
+        </div>
+      </header>
+
+      <section class="device-strip" aria-label="장비 현황">
+        <button class="device active" data-device="all">
+          <span class="device-icon">⌘</span><span><strong>전체 작업실</strong><small>9개 프로젝트</small></span>
+        </button>
+        <button class="device" data-device="macmini">
+          <span class="device-icon">▣</span><span><strong>Mac mini</strong><small><i class="online"></i>온라인 · 핵심 집필 2건</small></span>
+        </button>
+        <button class="device" data-device="macbook">
+          <span class="device-icon">▱</span><span><strong>MacBook</strong><small><i class="online"></i>현재 장비 · 제작 5건</small></span>
+        </button>
+        <div class="sync-note"><span>↗</span><div><strong>장비 간 자동 동기화 없음</strong><small>프로젝트 위치가 서로 분리되어 있습니다.</small></div></div>
+      </section>
+
+      <section class="metrics" aria-label="핵심 지표">
+        <article><span>진행 프로젝트</span><strong id="metricProjects">9</strong><small>핵심 출판 3 · 지원/읽기 6</small></article>
+        <article><span>확인된 PDF·EPUB</span><strong>7</strong><small>PDF 6 · EPUB 1</small></article>
+        <article class="accent"><span>가장 앞선 원고</span><strong>55%</strong><small>『반품 사유』 11 / 20장</small></article>
+        <article class="warning"><span>주의 필요</span><strong>3</strong><small>미커밋 · 사양 결정 · 병합 흔적</small></article>
+      </section>
+
+      <section class="focus-grid">
+        <article class="focus-card dark">
+          <div class="card-top"><div><span class="tag">오늘의 초점</span><h2>『반품 사유』</h2><p>장편소설 · Mac mini</p></div><span class="big-number">55<small>%</small></span></div>
+          <div class="chapter-track" aria-label="20장 중 11장 진행">
+            <div class="chapters" id="novelChapters"></div>
+            <div class="track-label"><span>1장</span><strong>11장까지 집필</strong><span>20장</span></div>
+          </div>
+          <div class="next-action"><span>다음 한 가지</span><strong>10·11장 고문 검토 → 12장 집필</strong></div>
+        </article>
+
+        <article class="focus-card light">
+          <div class="card-top"><div><span class="tag coral">출간 근접</span><h2>『아무도 그런 적 없다고 했다』</h2><p>창작동화 연작 · Mac mini</p></div><span class="status-seal">POD<br />READY</span></div>
+          <div class="pipeline">
+            <div class="done"><b>✓</b><span>원고</span></div><i></i><div class="done"><b>✓</b><span>검토</span></div><i></i><div class="done"><b>✓</b><span>삽화</span></div><i></i><div class="done"><b>✓</b><span>내지 PDF</span></div><i></i><div class="current"><b>5</b><span>표지 확정</span></div>
+          </div>
+          <div class="next-action peach"><span>다음 한 가지</span><strong>표지 시안 선택 후 POD 제출 사양 최종 점검</strong></div>
+        </article>
+      </section>
+
+      <section class="section-head">
+        <div><p class="eyebrow">PROJECT BOARD</p><h2>전체 프로젝트</h2></div>
+        <div class="filters" role="group" aria-label="상태 필터">
+          <button class="active" data-status="all">전체</button><button data-status="active">진행중</button><button data-status="review">검토필요</button><button data-status="archive">보관</button>
+        </div>
+      </section>
+      <section class="project-grid" id="projectGrid"></section>
+
+      <section class="bottom-grid">
+        <article class="panel priorities">
+          <div class="panel-head"><div><p class="eyebrow">NEXT ACTIONS</p><h2>우선순위</h2></div><span>이번 주</span></div>
+          <ol>
+            <li><em>01</em><div><strong>『반품 사유』 10·11장 고문 검토</strong><small>완료 후 12장 A/B안 집필 사이클 시작</small></div><span class="pill red">최우선</span></li>
+            <li><em>02</em><div><strong>동화책 표지 최종안 선택</strong><small>내지 PDF와 표지 시안은 이미 준비됨</small></div><span class="pill">결정</span></li>
+            <li><em>03</em><div><strong>빵집 지도책 제본 방식 결정</strong><small>분량 확대 또는 중철 전환 필요</small></div><span class="pill">사양</span></li>
+            <li><em>04</em><div><strong>fairy_tale 변경 79건 커밋</strong><small>수정 2건 · 미추적 77건, 백업 위험</small></div><span class="pill amber">주의</span></li>
+          </ol>
+        </article>
+        <article class="panel storage">
+          <div class="panel-head"><div><p class="eyebrow">WORKSPACE MAP</p><h2>장비별 역할</h2></div></div>
+          <div class="role"><span class="machine mini">▣</span><div><strong>Mac mini · 집필 본부</strong><p>장편소설, 창작동화, 에이전트 운영</p></div><b>4</b></div>
+          <div class="role"><span class="machine book">▱</span><div><strong>MacBook · 제작/열람</strong><p>POD 테스트, 독서 웹앱, 메모</p></div><b>5</b></div>
+          <div class="divider"></div>
+          <p class="risk"><span>!</span><b>단일 원본 주의</b><br />맥미니의 `novel01`은 Git 저장소가 아닙니다. 장비 고장에 대비한 백업 경로가 필요합니다.</p>
+        </article>
+      </section>
+      <footer><span>출판 작업실 통합 현황</span><span>실제 파일·Git·SSH 점검 기반</span></footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
